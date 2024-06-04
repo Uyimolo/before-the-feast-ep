@@ -17,7 +17,7 @@ const Navigation = ({ setDisplayNavigationMenu }) => {
   return (
     <div
       className={
-        'absolute w-[90%] max-w-[375px] left-1/2 -translate-x-1/2 top-32 bg-black grid items-center pl-6 rounded-3xl z-10 md:max-w-[450px] lg:relative lg:left-0 lg:top-0 lg:translate-x-0 lg:p-0 lg:w-fit lg:max-w-none lg:rounded-none'
+        'absolute w-[90%] max-w-[375px] left-1/2 -translate-x-1/2 top-32 bg-black grid items-center pl-6 rounded-3xl z-10 md:max-w-[450px] lg:relative lg:left-0 lg:top-0 lg:translate-x-0 lg:p-0 lg:w-fit lg:max-w-none lg:rounded-none lg:bg-transparent'
       }>
       <div className='absolute w-full top-0 left-0 py-6 px-6 flex justify-between lg:hidden'>
         <Logo />

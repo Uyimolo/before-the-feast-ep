@@ -33,11 +33,25 @@ const CountdownTimer = () => {
     setMinutes(minutes.toString().padStart(2, '0'));
     setSeconds(seconds.toString().padStart(2, '0'));
   };
+  useEffect(() => {
+    if (new Date() < new Date('June 7, 2024 00:00:00')) {
+      const timer = setTimeout(updateCountdown, 1000);
+      return () => clearTimeout(timer);
+    }
+    return;
+  });
+
+  // show 0000000 if launch date has passed
 
   useEffect(() => {
-    const timer = setTimeout(updateCountdown, 1000);
-    return () => clearTimeout(timer);
-  });
+    if (new Date() > new Date('June 7, 2024 00:00:00')) {
+      const zero = 0;
+      setDays(zero.toString().padStart(2, '0'));
+      setHours(zero.toString().padStart(2, '0'));
+      setMinutes(zero.toString().padStart(2, '0'));
+      setSeconds(zero.toString().padStart(2, '0'));
+    }
+  }, []);
 
   const timerDisplayData = [
     { timeframe: `${days > 1 ? 'Days' : 'Day'}`, duration: days },

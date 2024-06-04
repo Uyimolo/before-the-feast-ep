@@ -56,14 +56,15 @@ const Tracklist = () => {
             ))}
           </ul>
         </FramerReveal>
-
-        <a
-          className='md:mx-auto lg:hidden'
-          href='https://x.com/falzthebahdguy/status/1796614403300696375'
-          target='_blank'
-          rel='noopener noreferrer'>
-          <Button>See Tracklist</Button>
-        </a>
+        <FramerReveal className='md:mx-auto lg:hidden'>
+          <a
+            className=''
+            href='https://x.com/falzthebahdguy/status/1796614403300696375'
+            target='_blank'
+            rel='noopener noreferrer'>
+            <Button>See Tracklist</Button>
+          </a>
+        </FramerReveal>
       </div>
     </section>
   );

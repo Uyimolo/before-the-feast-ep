@@ -10,6 +10,8 @@ const Header = () => {
   useEffect(() => {
     if (isDesktop) {
       setDisplayNavigationMenu(true);
+    } else {
+      setDisplayNavigationMenu(false);
     }
   }, [isDesktop]);
   return (

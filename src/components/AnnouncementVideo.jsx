@@ -27,13 +27,14 @@ const AnnouncementVideo = () => {
           referrerPolicy='strict-origin-when-cross-origin'
           allowFullScreen></iframe>
       </FramerReveal>
-      <a
-        href='https://youtu.be/eQjZ3y0kKkA'
-        target='_blank'
-        rel='noopener noreferrer'
-        className='w-fit block lg:hidden md:mx-auto'>
-        <Button>See on Youtube</Button>
-      </a>
+      <FramerReveal className='w-fit block lg:hidden md:mx-auto'>
+        <a
+          href='https://youtu.be/eQjZ3y0kKkA'
+          target='_blank'
+          rel='noopener noreferrer'>
+          <Button>See on Youtube</Button>
+        </a>
+      </FramerReveal>
     </div>
   );
 };

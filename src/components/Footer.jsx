@@ -5,6 +5,8 @@ import spotify from '../assets/icons/spotify-color-svgrepo-com.svg';
 import audiomack from '../assets/icons/audiomack-svgrepo-com.svg';
 import boomplay from '../assets/icons/boomplay-svgrepo-com.svg';
 import youtubeMusic from '../assets/icons/youtube-music-song-multimedia-audio-svgrepo-com.svg';
+import Logo from './shared-components/Logo';
+import FramerReveal from './shared-components/FramerReveal';
 const Footer = () => {
   const mediaData = [
     [
@@ -55,16 +57,15 @@ const Footer = () => {
   ];
 
   return (
-    <footer className='bg-black w-full flex flex-col space-y-12 px-4 py-12 md:flex-row md:space-y-0 md:justify-between md:px-12 lg:px-20'>
-
-        
+    <footer className='w-full flex flex-col space-y-12 px-4 py-16 border-t border-t-4 items-center pb-24 md:flex-row md:space-y-0 md:justify-between md:px-12 lg:px-20'>
+      <FramerReveal className=' md:self-center lg:self-start'>
+        <Logo />
+      </FramerReveal>
       {/* Map over parent get individual social data */}
       {mediaData.map((mediaType, index) => (
-        <div className='space-y-2 w-fit' key={index}>
+        <FramerReveal className='space-y-2 w-fit' key={index}>
           {/* Get Headings mediatype[0] */}
-          <p className='text-white text-sm md:text-left'>
-            {mediaType[0]}
-          </p>
+          <p className='text-white text-sm md:text-left'>{mediaType[0]}</p>
           <div className='flex space-x-6'>
             {/* Map over children to get icons and links */}
             {mediaType[1].map((account) => (
@@ -79,8 +80,16 @@ const Footer = () => {
               </div>
             ))}
           </div>
-        </div>
+        </FramerReveal>
       ))}
+      <div className='absolute bottom-5 left-1/2 -translate-x-1/2'>
+        <p className='text-white text-center'>
+          Created by{' '}
+          <a href='https://x.com/codeFrontline' className='text-amber-100'>
+            @CodeFrontline
+          </a>
+        </p>
+      </div>
     </footer>
   );
 };
